@@ -36,6 +36,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
     runtimeOnly("ch.qos.logback:logback-classic")
+    runtimeOnly("org.postgresql:postgresql:42.2.23.jre7")
     runtimeOnly("com.h2database:h2")
     implementation("io.micronaut:micronaut-validation")
 
