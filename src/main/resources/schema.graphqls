@@ -1,0 +1,14 @@
+scalar Decimal
+
+type account {
+    id: ID!
+    name: String!
+    description: String!
+}
+
+type transaction {
+    id: ID!
+    name: String!
+    description: String!
+    value: Decimal!
+}
