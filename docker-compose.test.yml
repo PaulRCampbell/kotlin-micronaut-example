@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  kotlin-micronaut-example:
+    user: root
+    build:
+      context: .
+      dockerfile: docker.test
+    command: ["sh", "-c", "./gradlew --no-daemon test --fail-fast --console plain --stacktrace"]
+  postgres:
+    image: "postgres:13.4"
+    environment:
+      POSTGRES_USER: mydb_user
+      POSTGRES_PASSWORD: passowrd
+      POSTGRES_DB: mydb
+    ports:
+      - 5432:5432

@@ -1,0 +1,11 @@
+FROM gradle:6.5.0-jdk14
+
+ENV ROOT_FOLDER kotlin-micronaut-example
+
+USER root
+RUN mkdir /$ROOT_FOLDER && chown -R gradle:gradle /$ROOT_FOLDER
+
+USER gradle
+COPY --chown=gradle:gradle . /$ROOT_FOLDER
+
+WORKDIR /$ROOT_FOLDER
