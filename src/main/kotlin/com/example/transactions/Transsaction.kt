@@ -1,4 +1,4 @@
-package transactions
+package com.example.transactions
 
 import com.example.accounts.Account
 import java.math.BigDecimal

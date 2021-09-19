@@ -12,3 +12,7 @@ type transaction {
     description: String!
     value: Decimal!
 }
+
+type Query {
+    accounts: [account]!
+}
